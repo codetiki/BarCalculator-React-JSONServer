@@ -37,15 +37,15 @@ const BarChart = () => {
   // alustetan arvoksi 0, jotta jokaisessa on koko ajan jokin arvo
   const [formData, setFormData] = useState({
     "nimi": "",
-    "pituusL": "0",
-    "pituusA": "0",
-    "pituusB": "0",
-    "kuormaTV": "0",
-    "kuormaPK": "0",
-    "kuormaPM": "0",
+    "pituusL": "",
+    "pituusA": "",
+    "pituusB": "",
+    "kuormaTV": "",
+    "kuormaPK": "",
+    "kuormaPM": "",
     "tyyppi": "",
-    "maxM": "0",
-    "maxV": "0"
+    "maxM": "",
+    "maxV": ""
   });
 
   const [force, setForce] = useState(""); // poista

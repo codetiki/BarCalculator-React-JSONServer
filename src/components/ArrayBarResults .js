@@ -351,7 +351,6 @@ const ArrayBarResults = (props) => {
                                     <input
                                         type="text"
                                         name="pituus"
-
                                         placeholder="Lisää pituus L..."
                                         value={formData.pituusL}
                                         onChange={(e) => {
@@ -370,7 +369,6 @@ const ArrayBarResults = (props) => {
                                     <input
                                         type="text"
                                         name="pituusB"
-
                                         placeholder="Lisää pituus B..."
                                         value={formData.pituusB}
                                         onChange={(e) => {
@@ -380,7 +378,6 @@ const ArrayBarResults = (props) => {
                                     <input
                                         type="text"
                                         name="kuorma"
-
                                         placeholder="Lisää tasainen kuorma..."
                                         value={formData.kuormaTV}
                                         onChange={(e) => {
@@ -390,7 +387,6 @@ const ArrayBarResults = (props) => {
                                     <input
                                         type="text"
                                         name="kuorma"
-
                                         placeholder="Lisää Pistekuorma..."
                                         value={formData.kuormaPK}
                                         onChange={(e) => {
@@ -400,7 +396,6 @@ const ArrayBarResults = (props) => {
                                     <input
                                         type="text"
                                         name="kuorma"
-
                                         placeholder="Lisää Pistemomentti..."
                                         value={formData.kuormaPM}
                                         onChange={(e) => {
@@ -460,6 +455,7 @@ const ArrayBarResults = (props) => {
                                         type="text"
                                         // value={name}
                                         // onChange={(e) => setName(e.target.value)}
+                                        placeholder="Lisää nimi ..."
                                         value={tulos.nimi}
                                         onChange={(e) => {
                                             setTulos({ ...tulos, nimi: e.target.value });
@@ -469,6 +465,7 @@ const ArrayBarResults = (props) => {
                                         type="text"
                                         // value={length}
                                         // onChange={(e) => setLength(e.target.value)}
+                                        placeholder="Lisää pituus L ..."
                                         value={tulos.pituusL}
                                         onChange={(e) => {
                                             setTulos({ ...tulos, pituusL: e.target.value });
@@ -536,6 +533,7 @@ const ArrayBarResults = (props) => {
                                         type="text"
                                         // value={forceType}
                                         // onChange={(e) => setForceType(e.target.value)}
+                                        placeholder="Lisää tyyppi..."
                                         value={tulos.tyyppi}
                                         onChange={(e) => {
                                             setTulos({ ...tulos, tyyppi: e.target.value });
@@ -545,6 +543,7 @@ const ArrayBarResults = (props) => {
                                         type="text"
                                         // value={maxMoment}
                                         // onChange={(e) => setMaxMoment(e.target.value)}
+                                        placeholder="Lisää maxM..."
                                         value={tulos.maxM}
                                         onChange={(e) => {
                                             setTulos({ ...tulos, maxM: e.target.value });
@@ -554,6 +553,7 @@ const ArrayBarResults = (props) => {
                                         type="text"
                                         // value={maxShearForce}
                                         // onChange={(e) => setMaxShearForce(e.target.value)}
+                                        placeholder="Lisää maxV..."
                                         value={tulos.maxV}
                                         onChange={(e) => {
                                             setTulos({ ...tulos, maxV: e.target.value });

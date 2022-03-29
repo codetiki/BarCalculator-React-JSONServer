@@ -41,19 +41,6 @@
     },
     {
       "nimi": "",
-      "pituusL": "9",
-      "pituusA": "0",
-      "pituusB": "0",
-      "kuormaTV": "9",
-      "kuormaPK": "0",
-      "kuormaPM": "0",
-      "tyyppi": "TV",
-      "maxM": -91.125,
-      "maxV": -40.5,
-      "id": 15
-    },
-    {
-      "nimi": "",
       "pituusL": "2",
       "pituusA": "0",
       "pituusB": "0",
@@ -77,6 +64,19 @@
       "maxM": -8,
       "maxV": "0",
       "id": 17
+    },
+    {
+      "nimi": "timo",
+      "pituusL": "1",
+      "pituusA": "2",
+      "pituusB": "3",
+      "kuormaTV": "4",
+      "kuormaPK": "5",
+      "kuormaPM": "6",
+      "tyyppi": "TV",
+      "maxM": "7",
+      "maxV": "8",
+      "id": 18
     }
   ]
 }
