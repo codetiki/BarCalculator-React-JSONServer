@@ -104,8 +104,6 @@ const BarChart = () => {
       setPointForce("");
       setLoad("");
     }
-
-
   }
 
   const onShowTaulukkoForm = () => {

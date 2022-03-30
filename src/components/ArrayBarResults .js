@@ -160,6 +160,18 @@ const ArrayBarResults = (props) => {
 
             // lisätään tulokset-listaan data-tulos 
             setTulokset([...tulokset, data]);
+            setFormData({
+                ...formData, nimi: "",
+                pituusL: "",
+                pituusA: "",
+                pituusB: "",
+                kuormaTV: "",
+                kuormaPK: "",
+                kuormaPM: "",
+                tyyppi: "",
+                maxM: "",
+                maxV: ""
+            });
             setPostQuery(false);
         }
         if (postQuery != '') {
