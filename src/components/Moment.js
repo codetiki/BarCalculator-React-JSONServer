@@ -21,6 +21,7 @@ const Moment = (props) => {
     let [moment, setMoment] = useState([]);
     let [barMomentResults, setBarMomentResults] = useState([{ numero: "", pituus: "", kuorma: "", tyyppi: "", maxM: "" }]); // Tähän laitetaan lasketut tulokset
     let L = Number(lengthA) + Number(lengthB);
+    // let uusiMarvo = 0;
     // Palkin momentti
     // tasainen kuorma q [kN/m]
     // M = q*x/2 * (x - L)
@@ -33,9 +34,9 @@ const Moment = (props) => {
         if (forceType == "TV") {
             let m5 = load * (5 * length / 10) * ((5 * length / 10) - length) / 2;
             console.log("max moment [q=force] (1/8*q*L^2):", m5);
-            setMaxMoment(m5);
+            setMaxMoment(m5.toFixed(2));
             // haetaan taulukkoon momentin maksimiarvo
-            setFormData({ ...formData, maxM: m5 });
+            setFormData({ ...formData, maxM: m5.toFixed(2) });
 
             console.log("formData: ", formData);
 
@@ -51,14 +52,14 @@ const Moment = (props) => {
                 setBarMomentResults()
             }
             momentChange(moments);
-            maxMomentChange(m5);
+            maxMomentChange(m5.toFixed(2));
         }
         // PK-mom laskenta kunnossa
         if (forceType == "PK") {
             let m5 = - pointForce * lengthB * lengthA / L;
             console.log("max moment PK:", m5);
-            setMaxMoment(m5);
-            setFormData({ ...formData, maxM: m5 });
+            setMaxMoment(m5.toFixed(2));
+            setFormData({ ...formData, maxM: m5.toFixed(2) });
             console.log("formData: ", formData);
             // lasketaan momentti-arvot taulukkoon
             let mom = 0;
@@ -75,7 +76,7 @@ const Moment = (props) => {
             }
 
             momentChange(moments);
-            maxMomentChange(m5);
+            maxMomentChange(m5.toFixed(2));
         }
 
         // PM-mom laskenta kunnossa
@@ -84,13 +85,13 @@ const Moment = (props) => {
             if (lengthA > lengthB) {
                 m5 = - pointMoment * lengthA / L;
                 console.log("max moment PM:", m5);
-                setMaxMoment(m5);
-                setFormData({ ...formData, maxM: m5 });
-            } else if (lengthA < lengthB) {
+                setMaxMoment(m5.toFixed(2));
+                setFormData({ ...formData, maxM: m5.toFixed(2) });
+            } else if (lengthA <= lengthB) {
                 m5 = - pointMoment * lengthB / L;
                 console.log("max moment PM:", m5);
-                setMaxMoment(m5);
-                setFormData({ ...formData, maxM: m5 });
+                setMaxMoment(m5.toFixed(2));
+                setFormData({ ...formData, maxM: m5.toFixed(2) });
             }
 
 
@@ -109,7 +110,7 @@ const Moment = (props) => {
             }
 
             momentChange(moments);
-            maxMomentChange(m5);
+            maxMomentChange(m5.toFixed(2));
         }
 
     }

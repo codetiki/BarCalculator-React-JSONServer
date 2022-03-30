@@ -32,9 +32,9 @@ const ShearForce = (props) => {
         if (forceType == "TV") {
             s5 = - load * (length) / 2;
             console.log("max shearForce:", s5);
-            setMaxShearForce(s5);
+            setMaxShearForce(s5.toFixed(2));
             // haetaan taulukkoon leikkausvoiman maksimiarvo
-            setFormData({ ...formData, maxV: s5 });
+            setFormData({ ...formData, maxV: s5.toFixed(2) });
 
             for (var i = 0; i <= 20; i++) {
                 let shear = - load * (length - 2 * (i * length / 20)) / 2;
@@ -44,20 +44,20 @@ const ShearForce = (props) => {
             }
 
             shearChange(shearForces);
-            maxShearChange(s5);
+            maxShearChange(s5.toFixed(2));
         }
         // PK-shear laskenta kunnossa
         if (forceType == "PK") {
             if (lengthA > lengthB) {
                 s5 = - pointForce * lengthA / L;
                 console.log("max shearForce:", s5);
-                setMaxShearForce(s5);
-                setFormData({ ...formData, maxV: s5 });
-            } else if (lengthA < lengthB) {
+                setMaxShearForce(s5.toFixed(2));
+                setFormData({ ...formData, maxV: s5.toFixed(2) });
+            } else if (lengthA <= lengthB) {
                 s5 = - pointForce * lengthB / L;
                 console.log("max shearForce:", s5);
-                setMaxShearForce(s5);
-                setFormData({ ...formData, maxV: s5 });
+                setMaxShearForce(s5.toFixed(2));
+                setFormData({ ...formData, maxV: s5.toFixed(2) });
             }
 
             for (var i = 0; i <= 20; i++) {
@@ -75,15 +75,15 @@ const ShearForce = (props) => {
             }
 
             shearChange(shearForces);
-            maxShearChange(s5);
+            maxShearChange(s5.toFixed(2));
         }
         // PM-shear laskenta kunnossa
         if (forceType == "PM") {
 
             s5 = - pointMoment / L;
             console.log("max shearForce:", s5);
-            setMaxShearForce(s5);
-            setFormData({ ...formData, maxV: s5 });
+            setMaxShearForce(s5.toFixed(2));
+            setFormData({ ...formData, maxV: s5.toFixed(2) });
 
             for (var i = 0; i <= 20; i++) {
                 let shear = 0;
@@ -94,7 +94,7 @@ const ShearForce = (props) => {
             }
 
             shearChange(shearForces);
-            maxShearChange(s5);
+            maxShearChange(s5.toFixed(2));
         }
 
 
